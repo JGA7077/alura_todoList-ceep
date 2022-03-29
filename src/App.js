@@ -1,8 +1,12 @@
 import React from "react";
+import { ListaDeNotas } from "./components/ListaDeNotas";
 
 function App() {
   return (
-    <h1>Meu App React</h1>
+    <section>
+      
+      <ListaDeNotas />
+    </section>
   );
 }
 
