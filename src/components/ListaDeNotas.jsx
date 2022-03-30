@@ -6,8 +6,6 @@ class ListaDeNotas extends Component {
       <ul>
         {Array.of("Trabalho", "Trabalho", "Estudos").map((categoria, index) => {
           return (
-            // key é um identificador necessário para o React saber exatamente qual elemento
-            // ele deve re-redenrizar
             <li key={index}>
               <div>{categoria}</div>
               <CardNota />
