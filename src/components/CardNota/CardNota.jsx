@@ -5,9 +5,9 @@ class CardNota extends Component {
   render() {
     return (
       <section className="card-nota">
-        <header>
-          <h3>Título</h3>
-          <p>Escreva sua nota</p>
+        <header className="card-nota_cabecalho">
+          <h3 className="card-nota_titulo">Título</h3>
+          <p className="card-nota_texto">Escreva sua nota</p>
         </header>
       </section>
     );
