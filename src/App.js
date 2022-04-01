@@ -3,10 +3,16 @@ import ListaDeNotas from "./components/ListaDeNotas";
 import FormularioCadastro from "./components/FormularioCadastro";
 import "./assets/App.css";
 class App extends Component {
+
+  criarNota(titulo, texto) {
+
+    console.log(`recebeu as informações ${titulo} ${texto}`);
+  }
+
   render() {
     return (
       <section className="conteudo">
-        <FormularioCadastro />
+        <FormularioCadastro criarNota={this.criarNota} />
         <ListaDeNotas />
       </section>
     );
