@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./estilo.css";
 
 class FormularioCadastro extends Component {
-  // criação da propriedade
   constructor(props) {
     super(props);
     this.titulo = "";
@@ -28,6 +27,13 @@ class FormularioCadastro extends Component {
   render() {
     return (
       <form className="form-cadastro" onSubmit={this._criarNota.bind(this)}>
+        <select className="form-cadastro_input">
+          {this.props.categorias.map(categoria => {
+            return(
+              <option>{categoria}</option>
+            )
+          })}
+        </select>
         <input
           type="text"
           placeholder="Título"
