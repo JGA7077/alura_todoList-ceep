@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ListaDeNotas from "./components/ListaDeNotas";
 import FormularioCadastro from "./components/FormularioCadastro";
 import "./assets/App.css";
+import ListaDeCategorias from "./components/ListaDeCategorias";
 class App extends Component {
   constructor() {
     super();
@@ -20,16 +21,19 @@ class App extends Component {
   }
 
   deletarNota(index) {
-    let arrayNotas = this.state.notas
-    arrayNotas.splice(index,1)
-    this.setState({notas: arrayNotas})
+    let arrayNotas = this.state.notas;
+    arrayNotas.splice(index, 1);
+    this.setState({ notas: arrayNotas });
   }
 
   render() {
     return (
       <section className="conteudo">
         <FormularioCadastro criarNota={this.criarNota.bind(this)} />
-        <ListaDeNotas apagarNota={this.deletarNota.bind(this)} notas={this.state.notas} />
+        <main className="conteudo-principal">
+          <ListaDeCategorias />
+          <ListaDeNotas apagarNota={this.deletarNota.bind(this)} notas={this.state.notas} />
+        </main>
       </section>
     );
   }
