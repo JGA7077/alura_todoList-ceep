@@ -42,7 +42,10 @@ class FormularioCadastro extends Component {
   _criarNota(evento) {
     evento.preventDefault();
     evento.stopPropagation();
+
     this.props.criarNota(this.titulo, this.texto, this.categoria);
+
+    evento.target.reset();
   }
 
   render() {
@@ -61,6 +64,7 @@ class FormularioCadastro extends Component {
           placeholder="Título"
           className="form-cadastro_input"
           onChange={this._handleMudancaTitulo.bind(this)}
+          required
         />
         <textarea
           rows={15}

@@ -16,6 +16,14 @@
   align-items: center;
 }
 
+.card-nota_cabecalho svg {
+  cursor: pointer;
+}
+
+.card-nota_cabecalho svg:hover {
+  filter: opacity(0.5);
+}
+
 .card-nota_texto {
   margin-top: 8px;
   font-size: 1em;

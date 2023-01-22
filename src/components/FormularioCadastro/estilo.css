@@ -24,6 +24,10 @@
   font-weight: 400;
 }
 
+.form-cadastro_submit:hover {
+  filter: opacity(0.7);
+}
+
 .form-cadastro_submit:active {
   background-color: var(--secundaria-ativa);
 }
